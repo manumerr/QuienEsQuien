@@ -8,6 +8,13 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Personaje juan = new Personaje("Juan Cuesta", 55);
+		
+		System.out.println(juan.getNombre());
+		
+		
+		/*
+		
 		//VAmos a iniciar aquí el proyecto del juego de Quien es Quien en Java
 		
 		//Ejercicio de practica de Java
@@ -31,6 +38,8 @@ public class Main {
 
 		resultado = numero/cantidad;
 		System.out.println("el promedio de tus numeros es " + resultado);
+		
+		*/
 	}
 
 }
