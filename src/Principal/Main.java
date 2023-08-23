@@ -8,10 +8,27 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Personaje juan = new Personaje("Juan Cuesta", 55);
+		Scanner teclado = new Scanner(System.in);
 		
-		System.out.println(juan.getNombre());
+		Personaje juan = new Personaje("Juan", 56, "profesor");
 		
+		System.out.println("Selecciona un pregunta:\n"
+				+ "1) ¿Tiene trabajo?\n"
+				+ "2) ¿De qué color tiene el pelo?\n"
+				+ "3) ¿Tiene Familia?\n"
+				+ "4) ¿Es rico?\n"
+				+ "5) ¿Trabaja en la central Nuclear?\n"
+				+ "6) ¿Trabaja en el colegio?\n"
+				+ "7) ¿Vive del crimen?\n"
+				+ "8) ¿Es mujer?\n"
+				+ "9) ¿Es alcohólico?\n"
+				+ "10) ¿Toca algún instrumento?");
+		
+		int numero = teclado.nextInt();
+		
+		if (numero == 1) {
+			System.out.println(juan.getTrabajo());
+		}
 		
 		/*
 		
@@ -22,7 +39,7 @@ public class Main {
 		Scanner teclado = new Scanner(System.in);
 		
 		System.out.println("Cuantos número quieres promediar?");
-		cantidad = teclado.nextDouble();
+		cantidad = teclado.nextDouble();<
 		
 		System.out.println("Dame los números");
 		numero = teclado.nextDouble();
