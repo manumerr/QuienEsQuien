@@ -1,6 +1,7 @@
 package Principal;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 
@@ -8,6 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		
 		Scanner teclado = new Scanner(System.in);
 		
@@ -20,7 +22,7 @@ public class Main {
 		Personaje barney = new Personaje ("Barney", 38, "no", "hombre", "castaño", "alcoholico", true, false, true, false);
 		Personaje frankGrames = new Personaje ("Frank Grames", 34, "C.Nuclear", "hombre", "negro", "Se hizo a si mismo", true, false, false, true);
 		Personaje modFlanders = new Personaje ("Mod Flanders", 34, "no", "mujer", "castaño", "no", true, false, false, true);
-		Personaje bob = new Personaje ("Actor Secundario Bon", 35, "crimen", "hombre", "pelirrojo", "no", true, false, true, true);
+		Personaje bob = new Personaje ("Actor Secundario Bob", 35, "crimen", "hombre", "pelirrojo", "no", true, false, true, true);
 		
 		//Añadimos los  personajes al array
 		springfield.add(homer);
@@ -30,9 +32,17 @@ public class Main {
 		springfield.add(modFlanders);
 		springfield.add(bob);
 		
+		//Generamos el num aleatorio que nos dará el peronaje del juego
+		
+		Random random = new Random();
+		int pElegido = random.nextInt(springfield.size());
+		
+		Personaje uno = springfield.get(pElegido);
 		
 		
+		System.out.println(uno.getNombre());
 		
+		/*
 		System.out.println("Selecciona un pregunta:\n"
 				+ "1) ¿Tiene trabajo?\n"
 				+ "2) ¿De qué color tiene el pelo?\n"
