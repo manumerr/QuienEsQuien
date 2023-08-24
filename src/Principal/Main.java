@@ -1,5 +1,6 @@
 package Principal;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 
@@ -10,7 +11,27 @@ public class Main {
 		
 		Scanner teclado = new Scanner(System.in);
 		
-		Personaje juan = new Personaje("Juan", 56, "profesor");
+		//Creamos el array list
+		ArrayList<Personaje> springfield = new ArrayList<>();
+		
+		//Creamos los personajes del juego
+		Personaje homer = new Personaje("Homer", 38, "C.Nuclear", "hombre", "no", "no", true, false, true, true);
+		Personaje srBurns = new Personaje ("Sr Burns", 104, "C.Nuclear", "hombre", "no", "poder", true, true, true, true);
+		Personaje barney = new Personaje ("Barney", 38, "no", "hombre", "castaño", "alcoholico", true, false, true, false);
+		Personaje frankGrames = new Personaje ("Frank Grames", 34, "C.Nuclear", "hombre", "negro", "Se hizo a si mismo", true, false, false, true);
+		Personaje modFlanders = new Personaje ("Mod Flanders", 34, "no", "mujer", "castaño", "no", true, false, false, true);
+		Personaje bob = new Personaje ("Actor Secundario Bon", 35, "crimen", "hombre", "pelirrojo", "no", true, false, true, true);
+		
+		//Añadimos los  personajes al array
+		springfield.add(homer);
+		springfield.add(srBurns);
+		springfield.add(barney);
+		springfield.add(frankGrames);
+		springfield.add(modFlanders);
+		springfield.add(bob);
+		
+		
+		
 		
 		System.out.println("Selecciona un pregunta:\n"
 				+ "1) ¿Tiene trabajo?\n"
@@ -27,7 +48,7 @@ public class Main {
 		int numero = teclado.nextInt();
 		
 		if (numero == 1) {
-			System.out.println(juan.getTrabajo());
+			System.out.println(homer.getTrabajo());
 		}
 		
 		/*
